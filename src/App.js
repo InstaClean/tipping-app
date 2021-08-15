@@ -12,14 +12,22 @@ function App() {
   const [tipTotal, setTipTotal] = useState(0)
 
   const calculateTip = (bill, tip, split) => {
-    const tipPerPerson = (bill * tip) / split
+    const tipToPercent = tip / 100;
+    const tipPerPerson = (bill * tipToPercent) / split
     const dollars = tipPerPerson.toFixed(2)
     return dollars
   }
 
   const calculateTotal = (bill, tip, split) => {
-    const total = (bill + (bill * tip)) / split
-    const dollars = total.toFixed(2)
+    const billParse = parseFloat(bill)
+    const tipParse = parseFloat(tip)
+    const splitParse = parseFloat(split)
+
+    const tipToPercent = tipParse / 100
+    const totalPerPerson = (billParse + (billParse * tipToPercent)) / splitParse
+    console.log(billParse)
+    const dollars = totalPerPerson.toFixed(2)
+    console.log(dollars)
     return dollars
   }
 
@@ -35,6 +43,7 @@ function App() {
   useEffect(() => {
     setTotal(calculateTotal(bill, tip, split))
     setTipTotal(calculateTip(bill, tip, split))
+    console.log('effect')
   }, [bill, tip, split])
 
   return (

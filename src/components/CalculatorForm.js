@@ -11,15 +11,18 @@ export const CalculatorForm = ({
 }) => {
     return (
         <form onChange={handleChange} >
-            <input  type="bill"
+            <p>bill</p>
+            <input  type="number"
                     value={bill}
                     onChange={({target}) => setBill(target.value)}
                     required />
-            <ButtonGroup    type="tip"
+            <p>tip%</p>
+            <ButtonGroup
                             tip={tip}
                             setTip={setTip}
                             required />
-            <input  type="split"
+            <p>People Splitting</p>
+            <input  type="number"
                     value={split}
                     onChange={({target}) => setSplit(target.value)}
                     required />

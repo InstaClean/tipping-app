@@ -12,8 +12,10 @@ function App() {
   const [tipTotal, setTipTotal] = useState(0)
 
   const calculateTip = (bill, tip, split) => {
-    const tipToPercent = tip / 100;
-    const tipPerPerson = (bill * tipToPercent) / split
+    const billParse = parseFloat(bill)
+    const tipParse = parseFloat(tip)
+    const splitParse = parseFloat(split)
+    const tipPerPerson = (billParse * tipParse) / splitParse
     const dollars = tipPerPerson.toFixed(2)
     return dollars
   }
@@ -22,7 +24,6 @@ function App() {
     const billParse = parseFloat(bill)
     const tipParse = parseFloat(tip)
     const splitParse = parseFloat(split)
-
     const tipToPercent = tipParse / 100
     const totalPerPerson = (billParse + (billParse * tipToPercent)) / splitParse
     console.log(billParse)
@@ -48,17 +49,20 @@ function App() {
 
   return (
     <div className="App">
-      <p>Form</p>
-      <CalculatorForm   tip={tip}
-                        bill={bill}
-                        split={split}
-                        setTip={setTip}
-                        setBill={setBill}
-                        setSplit={setSplit}
-                     />
-      <TotalDisplay     handleReset={handleReset} 
-                        total={total}
-                        tipTotal={tipTotal}/>    
+      <h1>S P L I T T E R</h1>
+      <div className="container" >
+        <CalculatorForm   
+                          tip={tip}
+                          bill={bill}
+                          split={split}
+                          setTip={setTip}
+                          setBill={setBill}
+                          setSplit={setSplit}/>
+        <TotalDisplay    
+                          handleReset={handleReset} 
+                          total={total}
+                          tipTotal={tipTotal}/>
+      </div>    
     </div>
   );
 }

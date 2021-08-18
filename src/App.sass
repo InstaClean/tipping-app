@@ -39,4 +39,91 @@ input
     border-radius: 0
 
 ///////////////////////////////
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap')
+
+@media screen and ( max-width: 360 )
     
+
+$SpaceMono: "Space Mono", mono
+
+html
+    display: flex
+    justify-content: center
+    align-items: center 
+    background-color: rgb(168, 224, 227)
+    font-family: $SpaceMono
+    height: 100vh
+    width: 100vw
+    display: flex
+    border: 1px solid red
+
+    .App
+        display: flex
+        flex-direction: column
+        text-align: center
+        margin: auto
+        width: 60rem
+        height: 40rem
+        border: 1px solid red
+
+        h1
+            color: rgb(52, 93, 93)
+            font-size:  3rem
+            font-weight: bold
+            text-align: center
+            width: 16rem
+            margin: auto
+            margin-bottom: 3rem
+
+        
+        .container
+            display: flex
+            flex-direction: row
+            justify-content: normal
+            border: 1px solid red
+            background-color: white
+            margin-top: auto
+            height: 32rem
+
+            .calculator
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-content: space-evenly
+                margin-right: 1rem
+                width: 50%
+                
+
+
+            .display
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                margin: 2rem
+                margin-left: 1rem
+                width: 50%
+                background-color: rgb(27,70,74)
+                border-radius: 2rem
+
+                .total
+                    display: flex
+                    flex-direction: row
+                    color: white
+                    margin: 2.5rem 2rem
+
+                    .info
+                        flex-direction: column
+
+                input
+                    display: inline-block
+                    padding-bottom: .125rem
+                    width: 80%
+                    margin-top: auto
+                    margin-bottom: 6rem
+                    font-family: $SpaceMono
+                    font-size: 2rem
+                    height: 3rem
+
+

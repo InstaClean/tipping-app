@@ -7,9 +7,21 @@ export const TotalDisplay = ({
 }) => {
     return (
         <div className="display">
-            <p>Total: {total}</p>
-            <p>Tip: {tipTotal}</p>
-            <input type="button" onClick={handleReset} />
+            <div className="total">
+                <div className="info">
+                    <p className="primary">Total Amount</p>
+                    <p className="secondary">/ Person</p>
+                </div>
+                <p className="cost">{total}</p>
+            </div>
+            <div className="total">
+                <div className="info">
+                    <p className="primary">Tip:</p>
+                    <p className="secondary">/ Person</p>
+                </div>
+                <p className="cost">{tipTotal}</p> 
+            </div>
+            <input type="button" value="reset" onClick={handleReset} />
         </div>
     )
 }

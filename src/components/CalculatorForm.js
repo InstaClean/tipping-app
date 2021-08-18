@@ -10,18 +10,18 @@ export const CalculatorForm = ({
     setSplit,
 }) => {
     return (
-        <form onChange={handleChange} >
-            <p>bill</p>
+        <form className="calculator" onChange={handleChange} >
+            <p>Bill</p>
             <input  type="number"
                     value={bill}
                     onChange={({target}) => setBill(target.value)}
                     required />
-            <p>tip%</p>
+            <p>Select Tip %</p>
             <ButtonGroup
                             tip={tip}
                             setTip={setTip}
                             required />
-            <p>People Splitting</p>
+            <p>Number of People</p>
             <input  type="number"
                     value={split}
                     onChange={({target}) => setSplit(target.value)}

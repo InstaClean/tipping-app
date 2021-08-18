@@ -67,6 +67,7 @@ html
         height: 40rem
         border: 1px solid red
 
+
         h1
             color: rgb(52, 93, 93)
             font-size:  3rem
@@ -85,6 +86,7 @@ html
             background-color: white
             margin-top: auto
             height: 32rem
+            border-radius: 2rem
 
             .calculator
                 display: flex
@@ -93,7 +95,7 @@ html
                 align-content: space-evenly
                 margin-right: 1rem
                 width: 50%
-                
+                border-radius: 2rem                
 
 
             .display
@@ -106,24 +108,47 @@ html
                 width: 50%
                 background-color: rgb(27,70,74)
                 border-radius: 2rem
+                padding-top: 1rem
 
                 .total
                     display: flex
                     flex-direction: row
                     color: white
-                    margin: 2.5rem 2rem
+                    margin: 2rem 2rem
+                    width: 90%
 
                     .info
                         flex-direction: column
+                        margin-right: auto
+                        tect-align: left
+                        margin-bottom: auto
+                        line-height: 1.5
 
+                        .primary
+                            font-size: 1.25rem
+
+                        .secondary
+                            font-size: 1rem
+
+
+                    .cost
+                        margin-left: auto
+                        margin-top: auto
+                        font-size: 5rem
                 input
                     display: inline-block
                     padding-bottom: .125rem
                     width: 80%
                     margin-top: auto
-                    margin-bottom: 6rem
+                    margin-bottom: 2.5rem
                     font-family: $SpaceMono
                     font-size: 2rem
                     height: 3rem
+                    background-color: rgb(46, 102, 108)
+                    color: rgb(27,70,74)
+                    border: none
+                    border-radius: .5rem
+
+                
 
 

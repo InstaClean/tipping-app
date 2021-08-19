@@ -51,16 +51,14 @@ html {
   height: 100vh;
   width: 100vw;
   display: flex;
-  border: 1px solid red;
 }
 html .App {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin: auto;
-  width: 60rem;
+  width: 64rem;
   height: 40rem;
-  border: 1px solid red;
 }
 html .App h1 {
   color: #345d5d;
@@ -75,7 +73,6 @@ html .App .container {
   display: flex;
   flex-direction: row;
   justify-content: normal;
-  border: 1px solid red;
   background-color: white;
   margin-top: auto;
   height: 32rem;
@@ -89,6 +86,59 @@ html .App .container .calculator {
   margin-right: 1rem;
   width: 50%;
   border-radius: 2rem;
+  margin-left: 2rem;
+  text-align: left;
+  font-family: "Space Mono", mono;
+}
+html .App .container .calculator input {
+  height: 3rem;
+  font-size: 1.75rem;
+  border: none;
+  background-color: #f4fafa;
+  border-radius: 0.5rem;
+  text-align: right;
+  padding-right: 1rem;
+  -moz-appearance: textfield;
+  font-family: "Space Mono", mono;
+  color: #5e7a7d;
+}
+html .App .container .calculator input[type=number]::-webkit-outer-spin-button,
+html .App .container .calculator input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+html .App .container .calculator .input-title {
+  display: flex;
+  flex-direction: row;
+}
+html .App .container .calculator p {
+  margin-bottom: 0.75rem;
+  padding-top: 1rem;
+  color: #6f7a7d;
+}
+html .App .container .calculator .warning {
+  color: red;
+  margin-left: auto;
+  flex-wrap: nowrap;
+  font-size: 0.85rem;
+}
+html .App .container .calculator .tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+html .App .container .calculator .tip-buttons input {
+  border: none;
+  font-family: "Space Mono", mono;
+  min-width: 7.5rem;
+  height: 3rem;
+  margin: 0.45rem;
+  text-align: center;
+  font-size: 1.75rem;
+}
+html .App .container .calculator .tip-buttons input[type=number] {
+  text-align: right;
 }
 html .App .container .display {
   display: flex;
@@ -112,20 +162,24 @@ html .App .container .display .total {
 html .App .container .display .total .info {
   flex-direction: column;
   margin-right: auto;
-  tect-align: left;
   margin-bottom: auto;
   line-height: 1.5;
+  margin-left: 1.5rem;
 }
 html .App .container .display .total .info .primary {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  text-align: left;
+  font-weight: bold;
 }
 html .App .container .display .total .info .secondary {
   font-size: 1rem;
+  text-align: left;
 }
 html .App .container .display .total .cost {
   margin-left: auto;
   margin-top: auto;
   font-size: 5rem;
+  color: #5dbeac;
 }
 html .App .container .display input {
   display: inline-block;
@@ -140,6 +194,10 @@ html .App .container .display input {
   color: #1b464a;
   border: none;
   border-radius: 0.5rem;
+}
+html .App .container .display input:hover {
+  background-color: #ade6df;
+  color: #1a4240;
 }
 
 /*# sourceMappingURL=App.css.map */

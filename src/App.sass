@@ -38,6 +38,13 @@ input
     -webkit-appearance: none
     border-radius: 0
 
+
+
+
+input[type=number] 
+    -moz-appearance:textfield
+
+
 ///////////////////////////////
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap')
@@ -56,16 +63,16 @@ html
     height: 100vh
     width: 100vw
     display: flex
-    border: 1px solid red
+
 
     .App
         display: flex
         flex-direction: column
         text-align: center
         margin: auto
-        width: 60rem
+        width: 64rem
         height: 40rem
-        border: 1px solid red
+
 
 
         h1
@@ -82,7 +89,7 @@ html
             display: flex
             flex-direction: row
             justify-content: normal
-            border: 1px solid red
+
             background-color: white
             margin-top: auto
             height: 32rem
@@ -95,7 +102,64 @@ html
                 align-content: space-evenly
                 margin-right: 1rem
                 width: 50%
-                border-radius: 2rem                
+                border-radius: 2rem 
+                margin-left: 2rem
+                text-align: left
+                font-family: $SpaceMono
+
+                input
+                    height: 3rem
+                    font-size: 1.75rem
+                    border: none
+                    background-color: hsl(185, 41%, 97%) 
+                    border-radius: .5rem
+                    text-align: right
+                    padding-right: 1rem
+                    -moz-appearance: textfield
+                    font-family: $SpaceMono
+                    color: hsl(186, 14%, 43%)
+
+                input[type=number]::-webkit-outer-spin-button,
+                input[type=number]::-webkit-inner-spin-button 
+                    -webkit-appearance: none
+                    margin: 0
+                
+                .input-title
+                    display: flex
+                    flex-direction: row
+
+                p
+                    margin-bottom: .75rem
+                    padding-top: 1rem
+                    color: rgb(111, 122, 125)
+
+
+                .warning
+                    color: red
+                    margin-left: auto
+                    flex-wrap: nowrap
+                    font-size: .85rem
+
+
+                .tip-buttons
+                    display: grid
+                    grid-template-columns: repeat(3, 1fr)
+                    grid-template-rows: repeat(2, 1fr)
+                    gap: .75rem 
+
+                    input
+                        border: none
+                        font-family: $SpaceMono
+                        min-width: 7.5rem
+                        height: 3rem
+                        margin: .45rem
+                        text-align: center
+                        font-size: 1.75rem
+                        
+
+                    input[type=number]
+                        text-align: right
+  
 
 
             .display
@@ -120,21 +184,25 @@ html
                     .info
                         flex-direction: column
                         margin-right: auto
-                        tect-align: left
                         margin-bottom: auto
                         line-height: 1.5
+                        margin-left: 1.5rem
 
                         .primary
-                            font-size: 1.25rem
+                            font-size: 1rem
+                            text-align: left
+                            font-weight: bold
 
                         .secondary
                             font-size: 1rem
+                            text-align: left
 
 
                     .cost
                         margin-left: auto
                         margin-top: auto
                         font-size: 5rem
+                        color: rgb(93, 190, 172)
                 input
                     display: inline-block
                     padding-bottom: .125rem
@@ -148,6 +216,10 @@ html
                     color: rgb(27,70,74)
                     border: none
                     border-radius: .5rem
+
+                input:hover
+                    background-color: rgb(173, 230, 223)
+                    color: rgb(26, 66, 64)
 
                 
 

@@ -5,12 +5,16 @@ import { TotalDisplay } from './components/TotalDisplay'
 
 function App() {
 
+  //state
   const [tip, setTip] = useState(0)
   const [bill, setBill] = useState(0)
   const [split, setSplit] = useState(1)
   const [total, setTotal] = useState(0)
   const [tipTotal, setTipTotal] = useState(0)
+  const [badBill, setBadBill] = useState(false)
+  const [badSplit, setBadSplit] = useState(false)
 
+  //calculates tip per person
   const calculateTip = (bill, tip, split) => {
     const billParse = parseFloat(bill)
     const tipParse = parseFloat(tip)
@@ -20,18 +24,19 @@ function App() {
     return dollars
   }
 
+  //calculates total per person
   const calculateTotal = (bill, tip, split) => {
     const billParse = parseFloat(bill)
     const tipParse = parseFloat(tip)
     const splitParse = parseFloat(split)
-    const tipToPercent = tipParse / 100
-    const totalPerPerson = (billParse + (billParse * tipToPercent)) / splitParse
+    const totalPerPerson = (billParse + (billParse * tipParse)) / splitParse
     console.log(billParse)
     const dollars = totalPerPerson.toFixed(2)
     console.log(dollars)
     return dollars
   }
 
+  //resets inputs
   const handleReset = (e) => {
     e.preventDefault();
 
@@ -40,12 +45,40 @@ function App() {
     setSplit(1);
 
   }
-  
+
+  // tip and total update
+  //renders bill and split warnings
   useEffect(() => {
     setTotal(calculateTotal(bill, tip, split))
     setTipTotal(calculateTip(bill, tip, split))
+    
+    if (bill < 0 || isNaN(bill)) {
+      console.log("Bill must be a positive value")
+      console.log(typeof bill)
+      setBadBill(true)
+    }
+
+    if (bill > 0) {
+      setBadBill(false)
+    }
+
+    if (split < 1){
+      console.log("split value must be a positive integer greater than 1")
+      setBadSplit(true)
+    }
+
+    if (split >= 1) {
+      setBadSplit(false)
+    }
     console.log('effect')
   }, [bill, tip, split])
+
+  useEffect(() => {
+    if (total < 0 || isNaN(total)) {
+      setTotal(0)
+      setTipTotal(0)
+    }
+  }, [total, tipTotal])
 
   return (
     <div className="App">
@@ -57,7 +90,9 @@ function App() {
                           split={split}
                           setTip={setTip}
                           setBill={setBill}
-                          setSplit={setSplit}/>
+                          setSplit={setSplit}
+                          badBill={badBill}
+                          badSplit={badSplit}/>
         <TotalDisplay    
                           handleReset={handleReset} 
                           total={total}

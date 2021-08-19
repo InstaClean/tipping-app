@@ -16,7 +16,7 @@ export const TotalDisplay = ({
             </div>
             <div className="total">
                 <div className="info">
-                    <p className="primary">Tip:</p>
+                    <p className="primary">Tip</p>
                     <p className="secondary">/ Person</p>
                 </div>
                 <p className="cost">{tipTotal}</p> 

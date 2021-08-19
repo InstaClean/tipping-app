@@ -8,11 +8,18 @@ export const CalculatorForm = ({
     setTip,
     split,
     setSplit,
+    badBill,
+    badSplit
 }) => {
     return (
         <form className="calculator" onChange={handleChange} >
-            <p>Bill</p>
-            <input  type="number"
+            <div className="input-title">
+                <p>Bill</p>
+                <p className="warning" hidden={!badBill}>Bill must be positive value.</p>
+            </div>
+            <input  className="bill-input"
+                    type="number"
+                    step="0.01"
                     value={bill}
                     onChange={({target}) => setBill(target.value)}
                     required />
@@ -21,8 +28,12 @@ export const CalculatorForm = ({
                             tip={tip}
                             setTip={setTip}
                             required />
-            <p>Number of People</p>
-            <input  type="number"
+            <div className="input-title">
+                <p>Number of People</p>
+                <p className="warning" hidden={!badSplit} >Split must be whole number &gt; 0.</p>
+            </div> 
+            <input  className="split-input"
+                    type="number"
                     value={split}
                     onChange={({target}) => setSplit(target.value)}
                     required />

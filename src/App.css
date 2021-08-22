@@ -144,7 +144,7 @@ html .App .container .calculator .tip-buttons input {
   font-family: "Space Mono", mono;
   background-color: #1b464a;
   color: white;
-  min-width: 7.5rem;
+  width: 7.5rem;
   height: 3rem;
   margin: 0.45rem;
   text-align: center;
@@ -223,14 +223,13 @@ html #custom {
   background-color: #f4fafa;
   color: #1b464a;
   text-align: right;
-  padding-right: 1rem;
 }
-html #custom:placeholder {
+html #custom::placeholder {
   text-align: center;
   padding: 0rem;
 }
 
-@media screen and (max-width: 375px) {
+@media only screen and (max-width: 375px) {
   html .App {
     width: 100vw;
   }
@@ -238,8 +237,20 @@ html #custom:placeholder {
     flex-direction: column;
     height: 120rem;
   }
-  html .App .container .bill-input {
-    width: 19.5rem;
+  html .App .container .calculator {
+    width: 90%;
+  }
+  html .App .container .calculator .tip-buttons {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+  }
+  html .App .container .display {
+    width: 90%;
+  }
+  html .App .container .display .total .cost {
+    font-size: 4rem;
   }
 }
 

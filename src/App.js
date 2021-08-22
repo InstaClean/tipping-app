@@ -19,7 +19,8 @@ function App() {
     const billParse = parseFloat(bill)
     const tipParse = parseFloat(tip)
     const splitParse = parseFloat(split)
-    const tipPerPerson = (billParse * tipParse) / splitParse
+    const tipPercent = tipParse / 100;
+    const tipPerPerson = (billParse * tipPercent) / splitParse
     const dollars = tipPerPerson.toFixed(2)
     return dollars
   }
@@ -29,12 +30,14 @@ function App() {
     const billParse = parseFloat(bill)
     const tipParse = parseFloat(tip)
     const splitParse = parseFloat(split)
-    const totalPerPerson = (billParse + (billParse * tipParse)) / splitParse
+    const tipPercent = tipParse / 100;
+    const totalPerPerson = (billParse + (billParse * tipPercent)) / splitParse
     console.log(billParse)
     const dollars = totalPerPerson.toFixed(2)
     console.log(dollars)
     return dollars
   }
+
 
   //resets inputs
   const handleReset = (e) => {
@@ -62,7 +65,7 @@ function App() {
       setBadBill(false)
     }
 
-    if (split < 1){
+    if (split < 1 || split % 1 === 0){
       console.log("split value must be a positive integer greater than 1")
       setBadSplit(true)
     }
@@ -74,7 +77,7 @@ function App() {
   }, [bill, tip, split])
 
   useEffect(() => {
-    if (total < 0 || isNaN(total)) {
+    if (total < 0 || isNaN(total) || !isFinite(total)) {
       setTotal(0)
       setTipTotal(0)
     }

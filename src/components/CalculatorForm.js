@@ -1,7 +1,6 @@
 import { ButtonGroup } from './ButtonGroup';
 
 export const CalculatorForm = ({
-    handleChange,
     bill,
     setBill,
     tip,
@@ -12,7 +11,7 @@ export const CalculatorForm = ({
     badSplit
 }) => {
     return (
-        <form className="calculator" onChange={handleChange} >
+        <form className="calculator"  >
             <div className="input-title">
                 <p>Bill</p>
                 <p className="warning" hidden={!badBill}>Bill must be positive value.</p>

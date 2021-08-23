@@ -52,9 +52,6 @@ html {
   width: 100vw;
   display: flex;
 }
-html input:focus {
-  outline-color: green;
-}
 html .App {
   display: flex;
   flex-direction: column;
@@ -110,13 +107,16 @@ html .App .container .calculator input input[type=number]::-webkit-inner-spin-bu
   -webkit-appearance: none;
   margin: 0;
 }
+html .App .container .calculator input:focus {
+  outline: 2px solid green;
+}
 html .App .container .calculator .bill-input {
   background: no-repeat url("./resources/icon-dollar.svg");
-  background-size: 2rem 90%;
+  background-size: 2rem 85%;
 }
 html .App .container .calculator .split-input {
   background: no-repeat url("./resources/icon-person.svg");
-  background-size: 2rem 90%;
+  background-size: 2rem 85%;
 }
 html .App .container .calculator .input-title {
   display: flex;

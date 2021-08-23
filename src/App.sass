@@ -58,10 +58,6 @@ html
     width: 100vw
     display: flex
 
-    input:focus
-        outline-color: green
-
-
     .App
         display: flex
         flex-direction: column
@@ -120,14 +116,17 @@ html
                         -webkit-appearance: none
                         margin: 0
                 
+                input:focus
+                    outline: 2px solid green
+                
                 .bill-input
                     background: no-repeat url("./resources/icon-dollar.svg")
-                    background-size: 2rem 90%
+                    background-size: 2rem 85%   
 
 
                 .split-input
                     background: no-repeat url("./resources/icon-person.svg")
-                    background-size: 2rem 90%
+                    background-size: 2rem 85%
 
                 
                 .input-title

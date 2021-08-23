@@ -32,9 +32,7 @@ function App() {
     const splitParse = parseFloat(split)
     const tipPercent = tipParse / 100;
     const totalPerPerson = (billParse + (billParse * tipPercent)) / splitParse
-    console.log(billParse)
     const dollars = totalPerPerson.toFixed(2)
-    console.log(dollars)
     return dollars
   }
 
@@ -56,8 +54,6 @@ function App() {
     setTipTotal(calculateTip(bill, tip, split))
     
     if (bill < 0 || isNaN(bill)) {
-      console.log("Bill must be a positive value")
-      console.log(typeof bill)
       setBadBill(true)
     }
 
@@ -66,14 +62,12 @@ function App() {
     }
 
     if (split < 1 || split % 1 === 0){
-      console.log("split value must be a positive integer greater than 1")
       setBadSplit(true)
     }
 
     if (split >= 1) {
       setBadSplit(false)
     }
-    console.log('effect')
   }, [bill, tip, split])
 
   useEffect(() => {

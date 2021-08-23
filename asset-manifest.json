@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tipping-app/static/css/main.2edb3d14.chunk.css",
+    "main.css": "/tipping-app/static/css/main.2c0be0ca.chunk.css",
     "main.js": "/tipping-app/static/js/main.fb7bdc79.chunk.js",
     "main.js.map": "/tipping-app/static/js/main.fb7bdc79.chunk.js.map",
     "runtime-main.js": "/tipping-app/static/js/runtime-main.dd5ada33.js",
@@ -10,14 +10,14 @@
     "static/js/3.296c6549.chunk.js": "/tipping-app/static/js/3.296c6549.chunk.js",
     "static/js/3.296c6549.chunk.js.map": "/tipping-app/static/js/3.296c6549.chunk.js.map",
     "index.html": "/tipping-app/index.html",
-    "static/css/main.2edb3d14.chunk.css.map": "/tipping-app/static/css/main.2edb3d14.chunk.css.map",
+    "static/css/main.2c0be0ca.chunk.css.map": "/tipping-app/static/css/main.2c0be0ca.chunk.css.map",
     "static/js/2.69ae0d92.chunk.js.LICENSE.txt": "/tipping-app/static/js/2.69ae0d92.chunk.js.LICENSE.txt",
     "static/media/App.css": "/tipping-app/static/media/icon-person.65bfd204.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.dd5ada33.js",
     "static/js/2.69ae0d92.chunk.js",
-    "static/css/main.2edb3d14.chunk.css",
+    "static/css/main.2c0be0ca.chunk.css",
     "static/js/main.fb7bdc79.chunk.js"
   ]
 }

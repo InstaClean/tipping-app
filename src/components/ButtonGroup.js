@@ -5,7 +5,7 @@ export const ButtonGroup = (props) => {
 
     return (
         <div className="tip-buttons">
-            <input type="button" value='0%'  onClick={({target}) => {setTip(target.value)}} />
+            <input type="button" value='5%'  onClick={({target}) => {setTip(target.value)}} />
             <input type="button" value='10%' onClick={({target}) => {setTip(target.value)}} />
             <input type="button" value='15%'  onClick={({target}) => {setTip(target.value)}} />
             <input type="button" value='20%'  onClick={({target}) => {setTip(target.value)}} />

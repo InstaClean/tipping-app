@@ -68,6 +68,7 @@ html .App h1 {
   width: 16rem;
   margin: auto;
   margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 html .App .container {
   display: flex;
@@ -223,6 +224,8 @@ html #custom {
   background-color: #f4fafa;
   color: #1b464a;
   text-align: right;
+  width: 7.5rem;
+  height: 3rem;
 }
 html #custom::placeholder {
   text-align: center;
